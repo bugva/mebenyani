@@ -1,0 +1,252 @@
+export const site = {
+  name: "Emir Buğra Aydoğan",
+  tagline: "Fotoğraf · Video · Web",
+  email: process.env.NEXT_PUBLIC_EMAIL ?? "emirbugra@example.com",
+  instagram: process.env.NEXT_PUBLIC_INSTAGRAM ?? "",
+  linkedin: process.env.NEXT_PUBLIC_LINKEDIN ?? "",
+  github: process.env.NEXT_PUBLIC_GITHUB ?? "",
+  about: `Adım Emir Buğra Aydoğan. Fotoğraf çekmek benim için gözlem alıştırması — ışık, kadraj, bir anı durdurmak. Aynı merakla video çekimi, editing ve web siteleri de yapıyorum: az söz, net yapı, mobilde iyi görünen sayfalar. Bu site beni tanıman için; sorun veya iş birliği olursa aşağıdan yazabilirsin.`,
+  interests: ["Sokak fotoğrafı", "Sahne ışığı", "Minimal arayüz"],
+  nav: [
+    { label: "Hakkımda", href: "#hakkimda", sectionId: "hakkimda" },
+    { label: "Fotoğraf", href: "#fotograf", sectionId: "fotograf" },
+    { label: "Neler", href: "#hizmetler", sectionId: "hizmetler" },
+    { label: "İletişim", href: "#iletisim", sectionId: "iletisim" },
+  ],
+  timeline: [
+    {
+      year: "2022 —",
+      title: "Fotoğraf",
+      description: "Portre ve sokak çekimleri; ışık ve kompozisyon odaklı.",
+    },
+    {
+      year: "2024 —",
+      title: "Video & editing",
+      description: "Etkinlik çekimi, aftermovie ve post-prodüksiyon.",
+    },
+    {
+      year: "2024 —",
+      title: "Web",
+      description: "Küçük işletme ve kişisel portföy siteleri.",
+    },
+  ],
+  focus: [
+    {
+      title: "Fotoğraf",
+      description: "Ankara ve çevresinde portre, sokak, konser ve günlük an çekimleri.",
+    },
+    {
+      title: "Video",
+      description: "Sahne, etkinlik ve sosyal medya için çekim + kurgu.",
+    },
+    {
+      title: "Web",
+      description: "Next.js ile hızlı, mobil uyumlu landing ve portföy siteleri.",
+    },
+  ],
+  process: [
+    {
+      step: "01",
+      title: "Bakmak",
+      description:
+        "Önce izlerim — ışık, mekân, tempo. Ne çekeceğime veya ne yazacağıma kendi merakım karar verir.",
+    },
+    {
+      step: "02",
+      title: "Denemek",
+      description:
+        "Kadrajı, kurguları, arayüzü yerinde kurarım. Az şey, net sonuç; kalabalık istemem.",
+    },
+    {
+      step: "03",
+      title: "Seçmek",
+      description:
+        "Çoğunu eleyip geride kalanı bırakırım. Kalan kare, klip veya sayfa benim için yeterliyse yeter.",
+    },
+  ],
+  skills: {
+    fotograf: [
+      "Lightroom",
+      "Kompozisyon",
+      "Portre",
+      "Sokak",
+      "Doğal ışık",
+    ],
+    video: [
+      "Çekim",
+      "Kurgu",
+      "Renk düzeltme",
+      "Aftermovie",
+      "Reels / Shorts",
+    ],
+    web: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React",
+      "Vercel",
+      "Responsive tasarım",
+    ],
+  },
+  services: [
+    {
+      title: "Web siteleri",
+      description:
+        "İşletmen veya kişisel markan için tek sayfa veya küçük çok sayfalı siteler.",
+      href: "#hizmetler",
+    },
+    {
+      title: "Fotoğraf çekimi",
+      description:
+        "Portre, etkinlik, konser ve ürün çekimleri — teslimat dijital arşiv veya web galeri.",
+      href: "#fotograf",
+    },
+    {
+      title: "Video çekimi",
+      description:
+        "Etkinlik, sahne ve sosyal medya için planlı video çekimi.",
+      href: "/projeler/fotograf#galeri",
+    },
+    {
+      title: "Editing / post-prodüksiyon",
+      description:
+        "Kurgu, renk düzenleme ve temel ses düzenleme ile teslimata hazır içerik.",
+      href: "/projeler/fotograf#galeri",
+    },
+    {
+      title: "Danışmanlık",
+      description:
+        "Site yapısı, içerik düzeni ve yaratıcı üretim akışı için sade teknik yönlendirme.",
+      href: "#iletisim",
+    },
+  ],
+  gallery: [
+    {
+      src: "/gallery/01.svg",
+      alt: "Gece şehir ışıkları",
+      caption: "Gece",
+      location: "Ankara",
+    },
+    {
+      src: "/gallery/02.svg",
+      alt: "Portre çalışması",
+      caption: "Portre",
+      location: "Stüdyo",
+    },
+    {
+      src: "/gallery/03.svg",
+      alt: "Doğa manzarası",
+      caption: "Doğa",
+      location: "Çevre yürüyüşü",
+    },
+    {
+      src: "/gallery/04.svg",
+      alt: "Mimari detay",
+      caption: "Mimari",
+      location: "Kampüs",
+    },
+    {
+      src: "/gallery/05.svg",
+      alt: "Sokak sahnesi",
+      caption: "Sokak",
+      location: "Merkez",
+    },
+    {
+      src: "/gallery/06.svg",
+      alt: "Detay kompozisyon",
+      caption: "Detay",
+    },
+    {
+      src: "/gallery/07.svg",
+      alt: "Manzara",
+      caption: "Manzara",
+    },
+    {
+      src: "/gallery/08.svg",
+      alt: "İç mekân",
+      caption: "İç mekân",
+    },
+    {
+      src: "/gallery/09.svg",
+      alt: "Günlük an",
+      caption: "An",
+    },
+  ],
+  testimonials: [
+    {
+      quote:
+        "Sitemizi bir haftada yayına aldı; menü ve iletişim net, müşteriler artık telefonla sormuyor.",
+      name: "Ayşe K.",
+      role: "Kafe işletmecisi",
+    },
+    {
+      quote:
+        "Fotoğraf çekiminde ışık ve kompozisyon konusunda çok düşünmüş; teslim edilen kareler beklentimin üstündeydi.",
+      name: "Can D.",
+      role: "Portre müşterisi",
+    },
+    {
+      quote:
+        "Sade, hızlı, gereksiz özellik yok — sitemiz net ve mobilde çok iyi duruyor.",
+      name: "Mert Y.",
+      role: "Küçük işletme sahibi",
+    },
+  ],
+  // Örnek/portföy amaçlı — gerçek iş birliklerinle güncelle.
+  venues: [
+    { name: "IF Performance Hall", kind: "Mekan" as const },
+    { name: "Jolly Joker Ankara", kind: "Mekan" as const },
+    { name: "Manolya Kafe Sahne", kind: "Mekan" as const },
+    { name: "Bodrum Gümbet Açık Hava", kind: "Mekan" as const },
+    { name: "Deniz Tekin", kind: "Sanatçı" as const },
+    { name: "Kara Kutu", kind: "Sanatçı" as const },
+    { name: "Ece Yılmaz Trio", kind: "Sanatçı" as const },
+    { name: "Sokak Orkestrası", kind: "Sanatçı" as const },
+  ],
+  portfolio: [
+    {
+      slug: "foto-seri-ankara",
+      title: "Ankara sokak serisi",
+      tag: "Fotoğraf" as const,
+      year: "2024",
+      description: "Şehir ışığı ve insan — kişisel fotoğraf serisi.",
+      details:
+        "Altı aylık kişisel proje: akşam ışığı, sokak portreleri ve mimari detaylar. Seri Instagram'da paylaşıldı; baskıya hazır dosyalar ayrıca arşivlendi.",
+      highlights: [
+        "40+ seçilmiş kare",
+        "Doğal ışık odaklı",
+        "Siyah-beyaz ve renk karışımı",
+      ],
+      image: "/portfolio/02.svg",
+      href: "#fotograf",
+    },
+  ],
+  contact: {
+    heading: "Merhaba de",
+    subtext: "Bir şey sormak veya birlikte bir şey denemek istersen e-posta ya da Instagram yeterli.",
+  },
+  faq: [
+    {
+      q: "Nasıl ulaşabilirim?",
+      a: "E-posta veya Instagram DM — ikisi de olur. Kısa yazar, ne düşündüğünü söylersen yeter; formal bir süreç yok.",
+    },
+    {
+      q: "Ne kadar sürer?",
+      a: "Fotoğrafta seçili kareler genelde birkaç gün, video kurgusu kapsama göre değişir. Aceleyse önceden yaz, çoğu zaman ayarlanır.",
+    },
+    {
+      q: "Revizyon olur mu?",
+      a: "Olur — makul ölçüde. Web’de yayın sonrası küçük düzeltmeler de sorun değil.",
+    },
+    {
+      q: "Ankara dışına çıkıyor musun?",
+      a: "Çıkıyorum. Şehir dışı işlerde yol ve konaklamayı birlikte netleştiririz.",
+    },
+  ],
+  footer: {
+    socialLabel: "Instagram",
+  },
+} as const;
+
+export type SiteConfig = typeof site;
+export type PortfolioItem = (typeof site.portfolio)[number];

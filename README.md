@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emir Buğra Aydoğan — Kişisel Tanıtım Sitesi
 
-## Getting Started
+Fotoğraf, video ve web odaklı kişisel portföy. İletişim e-posta ve Instagram üzerinden; ticari teklif formu yok.
 
-First, run the development server:
+## Kurulum
 
 ```bash
+npm install
+cp .env.example .env.local
+# .env.local dosyasını doldur
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Site: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Ortam değişkenleri
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Değişken | Açıklama |
+|----------|----------|
+| `RESEND_API_KEY` | (İsteğe bağlı) eski mesaj API’si için |
+| `TEKLIF_TO_EMAIL` | (İsteğe bağlı) |
+| `TEKLIF_FROM_EMAIL` | (İsteğe bağlı) |
 
-## Learn More
+## İçerik düzenleme
 
-To learn more about Next.js, take a look at the following resources:
+Tüm metinler, linkler ve portföy: [`content/site.ts`](content/site.ts)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fotoğraflar: `public/gallery/` — `01.svg` … `09.svg` dosyalarını kendi görsellerinle değiştir (`.jpg` kullanırsan `content/site.ts` içindeki yolları güncelle).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Instagram URL’sini `content/site.ts` içindeki `instagram` alanından güncelle.
 
-## Deploy on Vercel
+## Deploy (Vercel)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Repoyu GitHub’a push et
+2. [vercel.com](https://vercel.com) → Import → env değişkenlerini ekle
+3. Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Sayfalar
+
+| Rota | Açıklama |
+|------|----------|
+| `/` | Tanıtım — galeri, hakkımda, iletişim |
+| `/yazilar` | Yazılar |
+| `/projeler/fotograf` | Lens (konser fotoğrafı) |
+| `/projeler/kahve` | Demo kafe sayfası |
+| `/teklif` | Eski rota — `#iletisim`’e yönlendirir |
