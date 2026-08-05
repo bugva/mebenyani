@@ -103,7 +103,7 @@ export function Manifesto() {
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <SectionHeading
-            index="09 — Prensipler"
+            index="10 — Prensipler"
             title="Nasıl çalışırım"
             subtitle="Kurallar değil — tekrar tekrar işe yarayan şeyler."
           />

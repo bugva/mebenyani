@@ -7,8 +7,10 @@ import { Experiments } from "@/components/Experiments";
 import { Focus } from "@/components/Focus";
 import { Footer } from "@/components/Footer";
 import { Gallery } from "@/components/Gallery";
+import { GlitchEasterEgg } from "@/components/GlitchEasterEgg";
 import { Hero } from "@/components/Hero";
 import { Intro } from "@/components/Intro";
+import { LiveLab } from "@/components/LiveLab";
 import { Manifesto } from "@/components/Manifesto";
 import { Marquee } from "@/components/Marquee";
 import { Nav } from "@/components/Nav";
@@ -26,6 +28,7 @@ export default function Home() {
       <CustomCursor />
       <CursorGlow />
       <ScrollProgress />
+      <GlitchEasterEgg />
       <Nav />
       <main>
         <Hero />
@@ -38,6 +41,7 @@ export default function Home() {
         <PhotoPlayground />
         <Services />
         <Experiments />
+        <LiveLab />
         <Now />
         <BigMarquee />
         <Manifesto />

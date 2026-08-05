@@ -2,6 +2,7 @@
 
 import { site } from "@/content/site";
 import { BugvaLogo } from "@/components/BugvaLogo";
+import { triggerGlitch } from "@/components/GlitchEasterEgg";
 import { cn } from "@/lib/cn";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -90,6 +91,13 @@ export function CommandPalette() {
         keywords: "yukari top",
         run: () =>
           window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" }),
+      },
+      {
+        id: "glitch",
+        label: "Glitch modunu tetikle",
+        hint: "Easter egg",
+        keywords: "gizli bugva eglence mod",
+        run: triggerGlitch,
       },
       {
         id: "copy-email",

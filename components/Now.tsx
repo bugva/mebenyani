@@ -93,7 +93,7 @@ export function Now() {
       <div className="relative mx-auto max-w-4xl">
         <Reveal>
           <SectionHeading
-            index="08 — Şu an"
+            index="09 — Şu an"
             title="Ne yapıyorum şu an"
             subtitle="Canlı olmasa da dürüst bir anlık görüntü — haftada bir güncellerim."
           />

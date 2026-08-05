@@ -168,37 +168,6 @@ export const site = {
       caption: "An",
     },
   ],
-  testimonials: [
-    {
-      quote:
-        "Sitemizi bir haftada yayına aldı; menü ve iletişim net, müşteriler artık telefonla sormuyor.",
-      name: "Ayşe K.",
-      role: "Kafe işletmecisi",
-    },
-    {
-      quote:
-        "Fotoğraf çekiminde ışık ve kompozisyon konusunda çok düşünmüş; teslim edilen kareler beklentimin üstündeydi.",
-      name: "Can D.",
-      role: "Portre müşterisi",
-    },
-    {
-      quote:
-        "Sade, hızlı, gereksiz özellik yok — sitemiz net ve mobilde çok iyi duruyor.",
-      name: "Mert Y.",
-      role: "Küçük işletme sahibi",
-    },
-  ],
-  // Örnek/portföy amaçlı — gerçek iş birliklerinle güncelle.
-  venues: [
-    { name: "IF Performance Hall", kind: "Mekan" as const },
-    { name: "Jolly Joker Ankara", kind: "Mekan" as const },
-    { name: "Manolya Kafe Sahne", kind: "Mekan" as const },
-    { name: "Bodrum Gümbet Açık Hava", kind: "Mekan" as const },
-    { name: "Deniz Tekin", kind: "Sanatçı" as const },
-    { name: "Kara Kutu", kind: "Sanatçı" as const },
-    { name: "Ece Yılmaz Trio", kind: "Sanatçı" as const },
-    { name: "Sokak Orkestrası", kind: "Sanatçı" as const },
-  ],
   portfolio: [
     {
       slug: "foto-seri-ankara",
@@ -221,24 +190,6 @@ export const site = {
     heading: "Merhaba de",
     subtext: "Bir şey sormak veya birlikte bir şey denemek istersen e-posta ya da Instagram yeterli.",
   },
-  faq: [
-    {
-      q: "Nasıl ulaşabilirim?",
-      a: "E-posta veya Instagram DM — ikisi de olur. Kısa yazar, ne düşündüğünü söylersen yeter; formal bir süreç yok.",
-    },
-    {
-      q: "Ne kadar sürer?",
-      a: "Fotoğrafta seçili kareler genelde birkaç gün, video kurgusu kapsama göre değişir. Aceleyse önceden yaz, çoğu zaman ayarlanır.",
-    },
-    {
-      q: "Revizyon olur mu?",
-      a: "Olur — makul ölçüde. Web’de yayın sonrası küçük düzeltmeler de sorun değil.",
-    },
-    {
-      q: "Ankara dışına çıkıyor musun?",
-      a: "Çıkıyorum. Şehir dışı işlerde yol ve konaklamayı birlikte netleştiririz.",
-    },
-  ],
   footer: {
     socialLabel: "Instagram",
   },
