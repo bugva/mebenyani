@@ -1,10 +1,11 @@
 "use client";
 
 import { site } from "@/content/site";
-import { AnimatePresence, animate, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
+import { animate, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Magnetic } from "@/components/Magnetic";
 import { RGBSplitImage } from "@/components/RGBSplitImage";
+import { ScrambleText } from "@/components/ScrambleText";
 import { cn } from "@/lib/cn";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -161,18 +162,7 @@ export function Hero() {
             transition={{ duration: 0.65, delay: 0.2, ease }}
           >
             <span className="text-accent">→</span>
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={roles[roleIndex]}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.35, ease }}
-                className="inline-block text-foreground"
-              >
-                {roles[roleIndex]}
-              </motion.span>
-            </AnimatePresence>
+            <ScrambleText text={roles[roleIndex]} className="text-foreground" />
             <span>— Ankara</span>
           </motion.p>
 

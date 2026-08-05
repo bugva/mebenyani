@@ -5,6 +5,7 @@ import { cn } from "@/lib/cn";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Magnetic } from "@/components/Magnetic";
+import { openCommandPalette } from "@/components/CommandPalette";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -85,6 +86,15 @@ export function Nav() {
           })}
         </nav>
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={openCommandPalette}
+            className="hidden items-center gap-1.5 rounded-full border border-border px-3 py-2 font-mono text-[11px] text-muted transition-colors hover:border-accent/45 hover:text-foreground md:inline-flex"
+            aria-label="Hızlı menüyü aç (Ctrl+K)"
+            title="Hızlı menü (⌘K / Ctrl+K)"
+          >
+            ⌘K
+          </button>
           <a
             href={site.instagram || "#iletisim"}
             {...(site.instagram
@@ -125,6 +135,16 @@ export function Nav() {
               </li>
             ))}
             <li className="pt-1">
+              <button
+                type="button"
+                className="gradient-border mb-1 block w-full rounded-xl px-4 py-3 text-center text-sm font-semibold text-foreground"
+                onClick={() => {
+                  setOpen(false);
+                  openCommandPalette();
+                }}
+              >
+                Hızlı menü
+              </button>
               <a
                 href={site.instagram || "#iletisim"}
                 {...(site.instagram

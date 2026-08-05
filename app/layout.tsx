@@ -1,3 +1,5 @@
+import { BackToTop } from "@/components/BackToTop";
+import { CommandPalette } from "@/components/CommandPalette";
 import { JsonLd } from "@/components/JsonLd";
 import { PageTransition } from "@/components/PageTransition";
 import { SmoothScroll } from "@/components/SmoothScroll";
@@ -42,6 +44,8 @@ export default function RootLayout({
         <SmoothScroll>
           <PageTransition />
           {children}
+          <CommandPalette />
+          <BackToTop />
         </SmoothScroll>
       </body>
     </html>
