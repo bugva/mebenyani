@@ -11,12 +11,6 @@ import {
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const signals = [
-  { label: "Lens", value: "f/1.8 · 85mm" },
-  { label: "Kurgu", value: "24fps · Rec.709" },
-  { label: "Web", value: "Next · TS" },
-];
-
 /**
  * Hero sağ paneli: foto yerine imlece tepki veren lens/sinyal görseli.
  * Aperture halkaları, monogram ve canlı HUD — kütüphane yok.
@@ -120,7 +114,7 @@ export function HeroVisual() {
 
       <div className="absolute inset-0 grid place-items-center">
         <motion.div
-          className="relative grid h-[68%] w-[68%] place-items-center"
+          className="relative grid h-[76%] w-[76%] place-items-center"
           style={
             reduced
               ? undefined
@@ -166,27 +160,6 @@ export function HeroVisual() {
             </p>
           </div>
         </motion.div>
-      </div>
-
-      <div className="absolute inset-x-0 bottom-0 z-10 p-4">
-        <div className="grid grid-cols-3 gap-2">
-          {signals.map((item, i) => (
-            <motion.div
-              key={item.label}
-              className="rounded-xl border border-white/10 bg-black/40 px-2.5 py-2.5 backdrop-blur-md"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.45 + i * 0.08 }}
-            >
-              <p className="font-mono text-[9px] tracking-[0.16em] text-accent uppercase">
-                {item.label}
-              </p>
-              <p className="mt-1 truncate text-[11px] text-foreground/90">
-                {item.value}
-              </p>
-            </motion.div>
-          ))}
-        </div>
       </div>
 
       <div className="pointer-events-none absolute inset-4" aria-hidden>
