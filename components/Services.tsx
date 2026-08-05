@@ -53,7 +53,7 @@ export function Services() {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
               <SectionHeading
-                index="06 — Neler"
+                index="05 — Neler"
                 title="Neler yapıyorum"
                 subtitle="Web, fotoğraf, video ve editing — hepsi kişisel işler, resmi bir şirket değil."
               />

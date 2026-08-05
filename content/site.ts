@@ -115,12 +115,6 @@ export const site = {
         "Kurgu, renk düzenleme ve temel ses düzenleme ile teslimata hazır içerik.",
       href: "/projeler/fotograf#galeri",
     },
-    {
-      title: "Danışmanlık",
-      description:
-        "Site yapısı, içerik düzeni ve yaratıcı üretim akışı için sade teknik yönlendirme.",
-      href: "#iletisim",
-    },
   ],
   gallery: [
     {

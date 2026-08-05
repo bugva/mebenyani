@@ -51,7 +51,7 @@ export function Skills() {
       <div className="relative mx-auto max-w-6xl">
         <Reveal>
           <SectionHeading
-            index="05 — Beceriler"
+            index="04 — Beceriler"
             title="Araçlar ve alanlar"
             subtitle="Lenslerden kurguda, editörden deploy’a — kullandığım şeyler."
           />

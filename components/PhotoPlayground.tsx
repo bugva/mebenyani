@@ -25,7 +25,7 @@ export function PhotoPlayground() {
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <SectionHeading
-            index="06 — Deneme"
+            index="05 — Deneme"
             title="Fotoğraf paleti"
             subtitle="CSS filtreleriyle üç ton — tıkla, önizle."
           />
