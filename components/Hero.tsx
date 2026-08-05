@@ -4,7 +4,7 @@ import { site } from "@/content/site";
 import { animate, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Magnetic } from "@/components/Magnetic";
-import { RGBSplitImage } from "@/components/RGBSplitImage";
+import { HeroVisual } from "@/components/HeroVisual";
 import { ScrambleText } from "@/components/ScrambleText";
 import { cn } from "@/lib/cn";
 
@@ -74,7 +74,6 @@ function NameLine({
 }
 
 export function Hero() {
-  const featured = site.gallery[0];
   const sectionRef = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
 
@@ -233,28 +232,7 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.25, ease }}
         >
-          <div className="gradient-border relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl shadow-black/50">
-            <div className="group/hero relative h-full w-full overflow-hidden rounded-3xl">
-              <RGBSplitImage
-                src={featured.src}
-                alt={featured.alt}
-                fill
-                className="object-cover transition-transform duration-700 group-hover/hero:scale-105"
-                priority
-                sizes="(max-width: 1024px) 90vw, 45vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-transparent to-transparent" />
-              <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 backdrop-blur-md">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                <span className="font-mono text-[10px] tracking-widest text-white/80 uppercase">
-                  Son kare
-                </span>
-              </div>
-              <p className="absolute bottom-4 left-4 font-mono text-xs text-foreground/90">
-                {featured.caption}
-              </p>
-            </div>
-          </div>
+          <HeroVisual />
           <div className="absolute -bottom-4 -left-4 -z-10 h-full w-full rounded-3xl border border-accent/20" aria-hidden />
           <div className="absolute -right-3 -top-3 -z-10 h-full w-full rounded-3xl border border-[rgba(167,139,250,0.14)]" aria-hidden />
         </motion.div>
