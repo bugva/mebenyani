@@ -36,7 +36,10 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: /mebenyani
           NEXT_PUBLIC_SITE_URL: https://bugva.github.io/mebenyani
 
+      # enablement: Pages henüz açık değilse API üzerinden otomatik açmayı dener
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
