@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { kafe } from "@/content/kafe";
+import { asset } from "@/lib/asset";
 import { KafeReveal } from "@/components/kafe/KafeReveal";
 
 export function KafeStory() {
@@ -12,7 +13,7 @@ export function KafeStory() {
         <KafeReveal>
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-[var(--kafe-border)]">
             <Image
-              src="/kafe/hero-visual.svg"
+              src={asset("/kafe/hero-visual.svg")}
               alt=""
               fill
               className="object-cover opacity-90"

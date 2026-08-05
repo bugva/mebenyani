@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { site } from "@/content/site";
+import { asset } from "@/lib/asset";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useState } from "react";
@@ -13,7 +14,7 @@ const filters = [
   { id: "mono", label: "Mono", className: "grayscale contrast-125" },
 ] as const;
 
-const sampleSrc = site.gallery[1]?.src ?? "/gallery/02.svg";
+const sampleSrc = site.gallery[1]?.src ?? asset("/gallery/02.svg");
 
 export function PhotoPlayground() {
   const [active, setActive] = useState<(typeof filters)[number]["id"]>("original");

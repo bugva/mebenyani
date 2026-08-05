@@ -2,12 +2,16 @@ import type { MetadataRoute } from "next";
 import { posts } from "@/content/posts";
 import { getLensAlbumSlugs } from "@/lib/get-lens-gallery";
 
+export const dynamic = "force-static";
+
 const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://emirbugraaydogan.vercel.app";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const url = (path: string) => `${baseUrl}${basePath}${path}`;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const postEntries = posts.map((p) => ({
-    url: `${baseUrl}/yazilar/${p.slug}`,
+    url: url(`/yazilar/${p.slug}`),
     lastModified: new Date(p.date),
     changeFrequency: "monthly" as const,
     priority: 0.5,
@@ -15,32 +19,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: baseUrl,
+      url: url("/"),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/yazilar`,
+      url: url("/yazilar"),
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.6,
     },
     ...postEntries,
     {
-      url: `${baseUrl}/projeler/kahve`,
+      url: url("/projeler/kahve"),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/projeler/fotograf`,
+      url: url("/projeler/fotograf"),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     ...getLensAlbumSlugs().map((slug) => ({
-      url: `${baseUrl}/projeler/fotograf/konser/${slug}`,
+      url: url(`/projeler/fotograf/konser/${slug}`),
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.6,

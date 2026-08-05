@@ -20,6 +20,9 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://emirbugraaydogan.vercel.app",
+  ),
   title: "Emir Buğra Aydoğan",
   description:
     "Fotoğrafçı, video yapımcısı ve web geliştirici. Kişisel portföy ve tanıtım sitesi.",

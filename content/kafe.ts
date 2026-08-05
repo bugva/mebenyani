@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 export const kafe = {
   name: "Demle Kahve",
   tagline: "Ankara · sıcak fincan, sakin köşe",
@@ -72,7 +74,7 @@ export const kafe = {
       description: "Tatlılar ve granola günlük mutfaktan çıkar.",
     },
   ],
-  heroImage: "/kafe/hero-visual.svg",
+  heroImage: asset("/kafe/hero-visual.svg"),
   credit: {
     text: "Bu site örnek bir portföy çalışmasıdır.",
     author: "Emir Buğra Aydoğan",

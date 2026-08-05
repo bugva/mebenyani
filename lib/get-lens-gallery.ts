@@ -1,13 +1,14 @@
 import "server-only";
 import fs from "fs";
 import path from "path";
+import { asset } from "@/lib/asset";
 import galleryManifest from "@/content/foto-gallery.json";
 import type { LensAlbum, LensPhoto } from "@/lib/lens-gallery-types";
 
 const LENS_DIR = path.join(process.cwd(), "public", "projeler", "lens");
 const IMAGE_EXT = /\.(jpe?g|png|webp|avif|gif|svg)$/i;
 const COVER_FILE = /^cover\./i;
-const PUBLIC_PREFIX = "/projeler/lens";
+const PUBLIC_PREFIX = asset("/projeler/lens");
 
 type ManifestAlbum = {
   slug: string;

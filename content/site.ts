@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 export const site = {
   name: "Emir Buğra Aydoğan",
   tagline: "Fotoğraf · Video · Web",
@@ -122,52 +124,52 @@ export const site = {
   ],
   gallery: [
     {
-      src: "/gallery/01.svg",
+      src: asset("/gallery/01.svg"),
       alt: "Gece şehir ışıkları",
       caption: "Gece",
       location: "Ankara",
     },
     {
-      src: "/gallery/02.svg",
+      src: asset("/gallery/02.svg"),
       alt: "Portre çalışması",
       caption: "Portre",
       location: "Stüdyo",
     },
     {
-      src: "/gallery/03.svg",
+      src: asset("/gallery/03.svg"),
       alt: "Doğa manzarası",
       caption: "Doğa",
       location: "Çevre yürüyüşü",
     },
     {
-      src: "/gallery/04.svg",
+      src: asset("/gallery/04.svg"),
       alt: "Mimari detay",
       caption: "Mimari",
       location: "Kampüs",
     },
     {
-      src: "/gallery/05.svg",
+      src: asset("/gallery/05.svg"),
       alt: "Sokak sahnesi",
       caption: "Sokak",
       location: "Merkez",
     },
     {
-      src: "/gallery/06.svg",
+      src: asset("/gallery/06.svg"),
       alt: "Detay kompozisyon",
       caption: "Detay",
     },
     {
-      src: "/gallery/07.svg",
+      src: asset("/gallery/07.svg"),
       alt: "Manzara",
       caption: "Manzara",
     },
     {
-      src: "/gallery/08.svg",
+      src: asset("/gallery/08.svg"),
       alt: "İç mekân",
       caption: "İç mekân",
     },
     {
-      src: "/gallery/09.svg",
+      src: asset("/gallery/09.svg"),
       alt: "Günlük an",
       caption: "An",
     },
@@ -217,7 +219,7 @@ export const site = {
         "Doğal ışık odaklı",
         "Siyah-beyaz ve renk karışımı",
       ],
-      image: "/portfolio/02.svg",
+      image: asset("/portfolio/02.svg"),
       href: "#fotograf",
     },
   ],
