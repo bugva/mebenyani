@@ -1,15 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
   <defs>
-    <linearGradient id="bg-grad" gradientUnits="userSpaceOnUse" x1="20" y1="15" x2="115" y2="115">
+    <linearGradient id="bm-grad" gradientUnits="userSpaceOnUse" x1="15" y1="21" x2="125" y2="119">
       <stop offset="0%" stop-color="#7da4ff"/>
       <stop offset="100%" stop-color="#a78bfa"/>
     </linearGradient>
   </defs>
-  <!-- "b" harfi: gövde + objektif halkas? (foto?raf/video göndermesi) -->
-  <g fill="none" stroke="url(#bg-grad)" stroke-width="14" stroke-linecap="round">
-    <path d="M36 22 V104"/>
-    <circle cx="80" cy="82" r="26"/>
+  <!-- amblem: "b" + "v" monogram — monoline, wordmark ile ayni geometri -->
+  <g fill="none" stroke="url(#bm-grad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- b -->
+    <path d="M22 28 V112"/>
+    <circle cx="44" cy="90" r="22"/>
+    <!-- v -->
+    <path d="M82 68 L100 112 L118 68"/>
   </g>
-  <!-- diyafram noktas? -->
-  <circle cx="80" cy="82" r="7" fill="url(#bg-grad)"/>
+  <!-- diyafram noktasi (fotograf/video gondermesi) -->
+  <circle cx="44" cy="90" r="6.5" fill="url(#bm-grad)"/>
 </svg>

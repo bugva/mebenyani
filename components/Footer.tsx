@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { site } from "@/content/site";
+import { BugvaLogo } from "@/components/BugvaLogo";
 import { LocalTime } from "@/components/LocalTime";
 import { Magnetic } from "@/components/Magnetic";
 import { motion } from "framer-motion";
@@ -20,6 +21,7 @@ export function Footer() {
       />
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-10 md:flex-row md:items-end">
         <div>
+          <BugvaLogo variant="mark" className="mb-5 h-10 w-10" />
           <motion.p
             className="font-display text-4xl font-bold tracking-tight text-foreground md:text-5xl"
             initial={{ opacity: 0, y: 24 }}

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
   <defs>
-    <linearGradient id="bb-grad" gradientUnits="userSpaceOnUse" x1="40" y1="28" x2="122" y2="122">
+    <linearGradient id="bb-grad" gradientUnits="userSpaceOnUse" x1="25" y1="31" x2="135" y2="129">
       <stop offset="0%" stop-color="#7da4ff"/>
       <stop offset="100%" stop-color="#a78bfa"/>
     </linearGradient>
@@ -10,14 +10,15 @@
       <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
     </radialGradient>
   </defs>
-  <!-- koyu rozet zemini: favicon / avatar kullan1m1 -->
+  <!-- koyu rozet zemini: favicon / avatar kullanimi -->
   <rect width="160" height="160" rx="36" fill="#0a0a0c"/>
   <rect width="160" height="160" rx="36" fill="url(#bb-glow)"/>
   <rect x="1" y="1" width="158" height="158" rx="35" fill="none" stroke="rgba(245,243,236,0.08)" stroke-width="2"/>
-  <!-- amblem -->
-  <g fill="none" stroke="url(#bb-grad)" stroke-width="14" stroke-linecap="round">
-    <path d="M46 32 V114"/>
-    <circle cx="90" cy="92" r="26"/>
+  <!-- amblem: b + v -->
+  <g fill="none" stroke="url(#bb-grad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 38 V122"/>
+    <circle cx="54" cy="100" r="22"/>
+    <path d="M92 78 L110 122 L128 78"/>
   </g>
-  <circle cx="90" cy="92" r="7" fill="url(#bb-grad)"/>
+  <circle cx="54" cy="100" r="6.5" fill="url(#bb-grad)"/>
 </svg>

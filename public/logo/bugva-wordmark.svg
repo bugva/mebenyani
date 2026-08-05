@@ -5,22 +5,24 @@
       <stop offset="100%" stop-color="#a78bfa"/>
     </linearGradient>
   </defs>
-  <!-- "bugva" — monoline geometrik logotip -->
-  <g fill="none" stroke="url(#bw-grad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
-    <!-- b -->
-    <path d="M20 18 V90"/>
-    <circle cx="42" cy="68" r="22"/>
+  <!-- "bugva" — monoline geometrik logotip; b ve v amblem renginde vurgulu -->
+  <g fill="none" stroke="#9095a0" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
     <!-- u -->
     <path d="M82 46 L82 70 A22 22 0 0 0 126 70 L126 46"/>
     <!-- g -->
     <circle cx="166" cy="68" r="22"/>
     <path d="M188 46 V100 A18 18 0 0 1 152 100"/>
-    <!-- v -->
-    <path d="M206 46 L228 90 L250 46"/>
     <!-- a -->
     <circle cx="290" cy="68" r="22"/>
     <path d="M312 46 V90"/>
   </g>
-  <!-- b'nin objektif noktası — amblemle bağ -->
+  <g fill="none" stroke="url(#bw-grad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- b (amblem harfi) -->
+    <path d="M20 18 V90"/>
+    <circle cx="42" cy="68" r="22"/>
+    <!-- v (amblem harfi) -->
+    <path d="M206 46 L228 90 L250 46"/>
+  </g>
+  <!-- b'nin diyafram noktasi — amblemle bag -->
   <circle cx="42" cy="68" r="6" fill="url(#bw-grad)"/>
 </svg>

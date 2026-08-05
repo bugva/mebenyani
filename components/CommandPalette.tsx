@@ -1,6 +1,7 @@
 "use client";
 
 import { site } from "@/content/site";
+import { BugvaLogo } from "@/components/BugvaLogo";
 import { cn } from "@/lib/cn";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -210,6 +211,7 @@ export function CommandPalette() {
             transition={{ duration: reduced ? 0 : 0.22, ease }}
           >
             <div className="flex items-center gap-3 border-b border-border px-5">
+              <BugvaLogo variant="mark" className="h-4 w-4 shrink-0" />
               <span className="font-mono text-xs text-accent" aria-hidden>
                 ⌘K
               </span>

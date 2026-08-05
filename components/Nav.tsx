@@ -5,6 +5,7 @@ import { cn } from "@/lib/cn";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Magnetic } from "@/components/Magnetic";
+import { BugvaLogo } from "@/components/BugvaLogo";
 import { openCommandPalette } from "@/components/CommandPalette";
 
 export function Nav() {
@@ -54,11 +55,8 @@ export function Nav() {
         layout
       >
         <Magnetic strength={0.6} range={50}>
-          <a
-            href="#"
-            className="inline-block font-display text-sm font-semibold tracking-tight text-foreground md:text-base"
-          >
-            E<span className="text-accent">.</span>BA
+          <a href="#" className="inline-flex items-center" aria-label="bugva — başa dön">
+            <BugvaLogo variant="full" className="h-6 md:h-7" />
           </a>
         </Magnetic>
         <nav className="hidden items-center gap-1 md:flex">
