@@ -286,6 +286,11 @@ body {
   transform: translateX(100%);
 }
 
+.gallery-card:hover .gallery-hud,
+.gallery-card:focus-within .gallery-hud {
+  opacity: 1;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);

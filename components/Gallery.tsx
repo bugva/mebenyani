@@ -32,16 +32,20 @@ function GalleryCard({
   onClick: () => void;
   wide: boolean;
 }) {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <figure
       data-cursor="Gör →"
       className={cn(
-        "card-shine snap-item group relative shrink-0 cursor-pointer overflow-hidden rounded-2xl border bg-background transition-all duration-500",
+        "gallery-card card-shine snap-item group relative shrink-0 cursor-pointer overflow-hidden rounded-2xl border bg-background transition-all duration-500",
         wide
           ? "w-[min(85vw,420px)] border-accent/40 shadow-[0_0_30px_-10px_rgba(125,164,255,0.35)]"
           : "w-[min(70vw,320px)] border-border hover:border-accent/40",
       )}
       onClick={onClick}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       <div
         className={cn(
@@ -57,6 +61,24 @@ function GalleryCard({
           sizes="(max-width: 768px) 85vw, 420px"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80" />
+        {/* Kamera vizörü köşeleri + hover HUD */}
+        <div
+          className="gallery-hud pointer-events-none absolute inset-3 z-20 transition-opacity duration-500"
+          style={{ opacity: hovered ? 1 : 0 }}
+          aria-hidden
+        >
+          <span className="absolute left-0 top-0 h-5 w-5 border-l border-t border-white/70" />
+          <span className="absolute right-0 top-0 h-5 w-5 border-r border-t border-white/70" />
+          <span className="absolute bottom-0 left-0 h-5 w-5 border-b border-l border-white/70" />
+          <span className="absolute bottom-0 right-0 h-5 w-5 border-b border-r border-white/70" />
+          <span className="absolute right-2 top-2 font-mono text-[9px] tracking-[0.16em] text-white/75">
+            RAW · 4:5
+          </span>
+          <span className="absolute left-2 top-2 flex items-center gap-1.5 font-mono text-[9px] tracking-[0.16em] text-white/75">
+            <span className="h-1.5 w-1.5 rounded-full bg-red-400 shadow-[0_0_8px_rgba(248,113,113,0.8)]" />
+            REC
+          </span>
+        </div>
         <figcaption className="absolute bottom-0 left-0 right-0 p-5 transition-transform duration-500 ease-out group-hover:-translate-y-2">
           <span className="font-mono text-[10px] tracking-widest text-accent uppercase">
             {String(index + 1).padStart(2, "0")}
