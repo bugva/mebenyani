@@ -3,10 +3,12 @@ import { site } from "@/content/site";
 export const ders = {
   brand: "bugva · özel ders",
   year: "2026",
-  badge: "ODTÜ · Yüksek Onur öğrencilerinden",
+  badge: "ODTÜ'lü iki arkadaştan",
   title: "Özel Ders",
   exams: ["TYT", "AYT"],
   band: ["TYT Matematik", "AYT Matematik", "TYT Fizik", "AYT Fizik"],
+  subline:
+    "Bu sınavlara biz de hazırlandık. Şimdi bildiklerimizi seninle paylaşıyoruz: birebir, online ya da yüz yüze.",
   tutors: [
     {
       no: "01",
@@ -15,7 +17,7 @@ export const ders = {
       school: "ODTÜ Fizik",
       honor: "Yüksek Onur Öğrencisi",
       subjects: ["TYT Fizik", "AYT Fizik"],
-      topics: ["Konu anlatımı", "Soru çözümü", "Deneme analizi"],
+      topics: ["Önce mantık, sonra formül", "Bol soru, az ezber", "Takıldığın yerde dururuz"],
       accent: "blue" as const,
     },
     {
@@ -25,21 +27,21 @@ export const ders = {
       school: "ODTÜ Matematik",
       honor: "Yüksek Onur Öğrencisi",
       subjects: ["TYT Matematik", "AYT Matematik"],
-      topics: ["Konu anlatımı", "Soru çözümü", "Deneme analizi"],
+      topics: ["Temelden sağlam ilerleriz", "Anlamadan geçmeyiz", "Her hafta düzenli takip"],
       accent: "gold" as const,
     },
   ],
   features: [
-    "Birebir ders",
-    "Online / yüz yüze",
+    "Birebir",
+    "Online ya da yüz yüze",
     "Deneme analizi",
-    "Soru çözüm desteği",
-    "Düzenli takip",
+    "Sorun cevapsız kalmaz",
+    "İlk ders tanışma",
   ],
   cta: {
-    heading: "Derse başla.",
+    heading: "Önce tanışalım.",
     subtext:
-      "Hedefini, seviyeni ve uygun günlerini yaz — birlikte plan yapalım.",
+      "Hedefini, seviyeni ve uygun günlerini yaz; ilk ders tanışma dersimiz olsun. Gerisini birlikte planlarız.",
   },
   contact: {
     email: site.email,

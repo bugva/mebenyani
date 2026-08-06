@@ -63,9 +63,13 @@ export function DersPoster() {
                 </span>
               ))}
             </div>
+
+            <p className="mx-auto mt-[2.6cqw] max-w-[70cqw] text-[2.3cqw] leading-relaxed text-muted">
+              {ders.subline}
+            </p>
           </div>
 
-          <div className="mt-[3.5cqw] flex items-center justify-center gap-[2cqw] border-y border-border py-[1.7cqw] font-mono text-[2.05cqw] tracking-[0.18em] text-muted uppercase">
+          <div className="mt-[3cqw] flex items-center justify-center gap-[2cqw] border-y border-border py-[1.7cqw] font-mono text-[2.05cqw] tracking-[0.18em] text-muted uppercase">
             {ders.band.map((item, i) => (
               <span key={item} className="flex items-center gap-[2cqw]">
                 {i > 0 && <span className={i % 2 === 0 ? "text-accent" : "text-[#d4b46a]"} aria-hidden>◆</span>}
@@ -74,7 +78,7 @@ export function DersPoster() {
             ))}
           </div>
 
-          <div className="mt-[3.5cqw] grid grid-cols-2 gap-[3cqw]">
+          <div className="mt-[3cqw] grid grid-cols-2 gap-[3cqw]">
             {ders.tutors.map((tutor) => {
               const gold = tutor.accent === "gold";
               return (
@@ -147,7 +151,7 @@ export function DersPoster() {
             })}
           </div>
 
-          <div className="mt-[3cqw] flex flex-wrap items-center justify-center gap-x-[3cqw] gap-y-[1.2cqw]">
+          <div className="mt-[2.6cqw] flex flex-wrap items-center justify-center gap-x-[3cqw] gap-y-[1.2cqw]">
             {ders.features.map((feature) => (
               <span key={feature} className="flex items-center gap-[1.2cqw] text-[2.05cqw] text-muted">
                 <span className="text-accent" aria-hidden>◆</span>
@@ -158,7 +162,10 @@ export function DersPoster() {
 
           <div className="mt-auto pt-[3cqw] text-center">
             <h2 className="font-display text-[5.2cqw] font-extrabold tracking-tight">
-              Derse <span className="text-shimmer">başla.</span>
+              {ders.cta.heading.split(" ")[0]}{" "}
+              <span className="text-shimmer">
+                {ders.cta.heading.split(" ").slice(1).join(" ")}
+              </span>
             </h2>
             <p className="mx-auto mt-[1.4cqw] max-w-[62cqw] text-[2.15cqw] leading-relaxed text-muted">
               {ders.cta.subtext}
@@ -178,13 +185,13 @@ export function DersPoster() {
                 href={`mailto:${email}?subject=${encodeURIComponent("Özel ders — TYT/AYT")}`}
                 className="rounded-full border border-border px-[4.5cqw] py-[1.6cqw] text-[2.2cqw] font-medium text-muted"
               >
-                E-posta gönder
+                Mail at
               </a>
             </div>
           </div>
 
           <footer className="mt-[3cqw] flex items-center justify-between border-t border-border pt-[2.4cqw] font-mono text-[1.9cqw] tracking-wider text-muted/80">
-            <span>© {ders.year} bugva — özel ders</span>
+            <span>© {ders.year} bugva · özel ders</span>
             <span className="lowercase">{email}</span>
             <span className="uppercase">TYT · AYT</span>
           </footer>
