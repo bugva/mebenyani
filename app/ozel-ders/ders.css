@@ -1,0 +1,177 @@
+.ders-root {
+  --ders-bg: #050507;
+  --ders-fg: #f5f3ec;
+  --ders-muted: #8b887c;
+  --ders-blue: #7da4ff;
+  --ders-violet: #a78bfa;
+  --ders-gold: #d4b46a;
+  --ders-border: rgba(255, 255, 255, 0.08);
+
+  background: var(--ders-bg);
+  color: var(--ders-fg);
+  font-family: var(--font-dm), system-ui, sans-serif;
+}
+
+.ders-display {
+  font-family: var(--font-syne), system-ui, sans-serif;
+}
+
+.ders-mesh {
+  background:
+    radial-gradient(ellipse 70% 55% at 12% 85%, rgba(125, 164, 255, 0.14), transparent 55%),
+    radial-gradient(ellipse 60% 45% at 88% 12%, rgba(212, 180, 106, 0.12), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 55% 40%, rgba(167, 139, 250, 0.07), transparent 55%);
+}
+
+.ders-gold-text {
+  background: linear-gradient(120deg, #f2e3bb 0%, #d4b46a 45%, #96742f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ders-blue-text {
+  background: linear-gradient(120deg, #cddcff 0%, #7da4ff 45%, #4b6fd0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ders-stroke-blue {
+  -webkit-text-stroke: 1.5px rgba(125, 164, 255, 0.45);
+  color: transparent;
+}
+
+.ders-stroke-gold {
+  -webkit-text-stroke: 1.5px rgba(212, 180, 106, 0.4);
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .ders-stroke-blue,
+  .ders-stroke-gold {
+    -webkit-text-stroke-width: 2px;
+  }
+}
+
+/* Afiş arkasında süzülen semboller */
+.ders-symbol {
+  position: absolute;
+  font-family: var(--font-syne), system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  animation: ders-float 9s ease-in-out infinite;
+}
+
+@keyframes ders-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--tilt, 0deg));
+  }
+  50% {
+    transform: translateY(-16px) rotate(var(--tilt, 0deg));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ders-symbol {
+    animation: none;
+  }
+}
+
+.ders-ring {
+  position: absolute;
+  border-radius: 9999px;
+  border: 1px solid var(--ders-border);
+  pointer-events: none;
+}
+
+.ders-ticket {
+  border: 1px dashed rgba(212, 180, 106, 0.45);
+  background: rgba(212, 180, 106, 0.07);
+}
+
+.ders-card-blue {
+  box-shadow: 0 0 60px -18px rgba(125, 164, 255, 0.35);
+}
+
+.ders-card-gold {
+  box-shadow: 0 0 60px -18px rgba(212, 180, 106, 0.3);
+}
+
+.ders-chip-blue {
+  border: 1px solid rgba(125, 164, 255, 0.35);
+  background: rgba(125, 164, 255, 0.1);
+  color: #cddcff;
+}
+
+.ders-chip-gold {
+  border: 1px solid rgba(212, 180, 106, 0.35);
+  background: rgba(212, 180, 106, 0.08);
+  color: #f2e3bb;
+}
+
+/* Tam A4 (210×297mm) afiş: ekranda oranlı kutucuk, içerik cqw ile ölçeklenir */
+.a4-stage {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6.5rem 1rem 3rem;
+}
+
+.a4-sheet {
+  container-type: inline-size;
+  aspect-ratio: 210 / 297;
+  /* Flex kapsayıcı sığmayınca oran bozulup içerik kırpılmasın diye küçülme;
+     bunun yerine sayfa kaydırılabilir olur. */
+  flex-shrink: 0;
+  width: min(94vw, (100svh - 11.5rem) * 0.70707);
+  background: var(--ders-bg);
+  border-radius: 1.2cqw;
+  box-shadow:
+    0 0 0 1px var(--ders-border),
+    0 40px 90px -30px rgba(0, 0, 0, 0.8),
+    0 0 120px -40px rgba(125, 164, 255, 0.25);
+}
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    background: #050507;
+  }
+
+  .grain,
+  .scanlines,
+  .print-hidden {
+    display: none !important;
+  }
+
+  .ders-root {
+    position: static;
+    overflow: visible;
+  }
+
+  .a4-stage {
+    display: block;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .a4-sheet {
+    width: 210mm;
+    height: 297mm;
+    aspect-ratio: auto;
+    border-radius: 0;
+    box-shadow: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
