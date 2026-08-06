@@ -4,7 +4,7 @@ import "./ders.css";
 export const metadata: Metadata = {
   title: "Özel Ders — TYT/AYT Matematik & Fizik",
   description:
-    "ODTÜ Fizik ve ODTÜ Matematik yüksek onur öğrencilerinden TYT/AYT matematik ve fizik özel ders. Birebir, online veya yüz yüze.",
+    "ODTÜ Matematik yüksek onur öğrencisi Buğra Aydoğan ve ODTÜ Fizik yüksek onur öğrencisi Fatma Hilal Tekgöz'den TYT/AYT matematik ve fizik özel ders. Birebir, online veya yüz yüze.",
   openGraph: {
     title: "Özel Ders — TYT/AYT Matematik & Fizik",
     description: "ODTÜ yüksek onur öğrencilerinden birebir özel ders.",

@@ -2,17 +2,15 @@ import { site } from "@/content/site";
 
 export const ders = {
   brand: "bugva · özel ders",
+  year: "2026",
   badge: "ODTÜ · Yüksek Onur öğrencilerinden",
-  hero: {
-    title: "Özel Ders",
-    subtitle: "Matematik × Fizik",
-    exams: ["TYT", "AYT"],
-    subline:
-      "Birebir ders — online veya yüz yüze. Konu anlatımı, soru çözümü ve deneme analiziyle düzenli takip.",
-  },
+  title: "Özel Ders",
+  exams: ["TYT", "AYT"],
+  band: ["TYT Matematik", "AYT Matematik", "TYT Fizik", "AYT Fizik"],
   tutors: [
     {
       no: "01",
+      name: "Fatma Hilal Tekgöz",
       field: "Fizik",
       school: "ODTÜ Fizik",
       honor: "Yüksek Onur Öğrencisi",
@@ -22,6 +20,7 @@ export const ders = {
     },
     {
       no: "02",
+      name: "Buğra Aydoğan",
       field: "Matematik",
       school: "ODTÜ Matematik",
       honor: "Yüksek Onur Öğrencisi",
@@ -36,13 +35,6 @@ export const ders = {
     "Deneme analizi",
     "Soru çözüm desteği",
     "Düzenli takip",
-  ],
-  marquee: [
-    "TYT Matematik",
-    "AYT Matematik",
-    "TYT Fizik",
-    "AYT Fizik",
-    "Özel Ders",
   ],
   cta: {
     heading: "Derse başla.",

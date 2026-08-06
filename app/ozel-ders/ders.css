@@ -112,3 +112,66 @@
   background: rgba(212, 180, 106, 0.08);
   color: #f2e3bb;
 }
+
+/* Tam A4 (210×297mm) afiş: ekranda oranlı kutucuk, içerik cqw ile ölçeklenir */
+.a4-stage {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6.5rem 1rem 3rem;
+}
+
+.a4-sheet {
+  container-type: inline-size;
+  aspect-ratio: 210 / 297;
+  /* Flex kapsayıcı sığmayınca oran bozulup içerik kırpılmasın diye küçülme;
+     bunun yerine sayfa kaydırılabilir olur. */
+  flex-shrink: 0;
+  width: min(94vw, (100svh - 11.5rem) * 0.70707);
+  background: var(--ders-bg);
+  border-radius: 1.2cqw;
+  box-shadow:
+    0 0 0 1px var(--ders-border),
+    0 40px 90px -30px rgba(0, 0, 0, 0.8),
+    0 0 120px -40px rgba(125, 164, 255, 0.25);
+}
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    background: #050507;
+  }
+
+  .grain,
+  .scanlines,
+  .print-hidden {
+    display: none !important;
+  }
+
+  .ders-root {
+    position: static;
+    overflow: visible;
+  }
+
+  .a4-stage {
+    display: block;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .a4-sheet {
+    width: 210mm;
+    height: 297mm;
+    aspect-ratio: auto;
+    border-radius: 0;
+    box-shadow: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
