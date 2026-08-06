@@ -32,6 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...postEntries,
     {
+      url: url("/ozel-ders"),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: url("/projeler/kahve"),
       lastModified: new Date(),
       changeFrequency: "monthly",

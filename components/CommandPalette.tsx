@@ -48,13 +48,23 @@ export function CommandPalette() {
   );
 
   const actions = useMemo<Action[]>(() => {
-    const list: Action[] = site.nav.map((n) => ({
-      id: `section-${n.sectionId}`,
-      label: `${n.label} bölümüne git`,
-      hint: "Bölüm",
-      keywords: n.sectionId,
-      run: () => go(n.href),
-    }));
+    const list: Action[] = site.nav.map((n) =>
+      n.href.startsWith("/")
+        ? {
+            id: `page-${n.sectionId}`,
+            label: n.label,
+            hint: "Sayfa",
+            keywords: n.sectionId,
+            run: () => router.push(n.href),
+          }
+        : {
+            id: `section-${n.sectionId}`,
+            label: `${n.label} bölümüne git`,
+            hint: "Bölüm",
+            keywords: n.sectionId,
+            run: () => go(n.href),
+          },
+    );
     list.push(
       {
         id: "page-yazilar",

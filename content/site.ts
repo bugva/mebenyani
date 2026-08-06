@@ -13,6 +13,7 @@ export const site = {
     { label: "Hakkımda", href: "#hakkimda", sectionId: "hakkimda" },
     { label: "Fotoğraf", href: "#fotograf", sectionId: "fotograf" },
     { label: "Neler", href: "#hizmetler", sectionId: "hizmetler" },
+    { label: "Özel Ders", href: "/ozel-ders", sectionId: "ozel-ders" },
     { label: "İletişim", href: "#iletisim", sectionId: "iletisim" },
   ],
   timeline: [
