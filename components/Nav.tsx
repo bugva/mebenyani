@@ -49,14 +49,14 @@ export function Nav() {
         className={cn(
           "mx-auto flex max-w-6xl items-center justify-between rounded-full px-5 py-3 transition-all duration-500",
           scrolled
-            ? "glass shadow-lg shadow-black/30 ring-1 ring-accent/10"
+            ? "border border-border bg-background/80 backdrop-blur-md"
             : "bg-transparent",
         )}
         layout
       >
-        <Magnetic strength={0.6} range={50}>
+        <Magnetic strength={0.45} range={40}>
           <a href="#" className="inline-flex items-center" aria-label="bugva — başa dön">
-            <BugvaLogo variant="full" className="h-6 md:h-7" />
+            <BugvaLogo variant="full" className="h-5 md:h-6" />
           </a>
         </Magnetic>
         <nav className="hidden items-center gap-1 md:flex">
@@ -67,14 +67,14 @@ export function Nav() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative rounded-full px-4 py-2 text-sm transition-colors",
+                  "relative px-4 py-2 text-sm transition-colors",
                   active ? "text-foreground" : "text-muted hover:text-foreground",
                 )}
               >
                 {active && (
                   <motion.span
                     layoutId="nav-pill"
-                    className="absolute inset-0 rounded-full bg-accent-dim ring-1 ring-accent/25"
+                    className="absolute inset-x-3 bottom-1 h-px bg-foreground/70"
                     transition={{ type: "spring", stiffness: 380, damping: 32 }}
                   />
                 )}
@@ -87,7 +87,7 @@ export function Nav() {
           <button
             type="button"
             onClick={openCommandPalette}
-            className="hidden items-center gap-1.5 rounded-full border border-border px-3 py-2 font-mono text-[11px] text-muted transition-colors hover:border-accent/45 hover:text-foreground md:inline-flex"
+            className="hidden items-center rounded-full border border-border px-3 py-1.5 font-mono text-[10px] tracking-wider text-muted transition-colors hover:text-foreground md:inline-flex"
             aria-label="Hızlı menüyü aç (Ctrl+K)"
             title="Hızlı menü (⌘K / Ctrl+K)"
           >
@@ -98,7 +98,7 @@ export function Nav() {
             {...(site.instagram
               ? { target: "_blank", rel: "noopener noreferrer" }
               : {})}
-            className="gradient-border hidden rounded-full px-4 py-2 text-xs font-semibold tracking-wide text-foreground transition-shadow hover:shadow-[0_0_24px_-4px_rgba(125,164,255,0.4)] md:inline-block"
+            className="hidden rounded-full border border-border px-4 py-1.5 text-xs text-muted transition-colors hover:text-foreground md:inline-block"
           >
             Instagram
           </a>

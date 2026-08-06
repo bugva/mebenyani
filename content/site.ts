@@ -7,8 +7,8 @@ export const site = {
   instagram: process.env.NEXT_PUBLIC_INSTAGRAM ?? "",
   linkedin: process.env.NEXT_PUBLIC_LINKEDIN ?? "",
   github: process.env.NEXT_PUBLIC_GITHUB ?? "",
-  about: `Adım Emir Buğra Aydoğan. Fotoğraf çekmek benim için gözlem alıştırması — ışık, kadraj, bir anı durdurmak. Aynı merakla video çekimi, editing ve web siteleri de yapıyorum: az söz, net yapı, mobilde iyi görünen sayfalar. Bu site beni tanıman için; sorun veya iş birliği olursa aşağıdan yazabilirsin.`,
-  interests: ["Sokak fotoğrafı", "Sahne ışığı", "Minimal arayüz"],
+  about: `Fotoğraf. Video. Web. Aynı el, aynı standart. Kalabalık istemem — kalan şey yeterse yeter.`,
+  interests: ["Işık", "Kadraj", "Kod"],
   nav: [
     { label: "Hakkımda", href: "#hakkimda", sectionId: "hakkimda" },
     { label: "Fotoğraf", href: "#fotograf", sectionId: "fotograf" },
@@ -35,35 +35,32 @@ export const site = {
   focus: [
     {
       title: "Fotoğraf",
-      description: "Ankara ve çevresinde portre, sokak, konser ve günlük an çekimleri.",
+      description: "Portre, sokak, sahne. Işık doğruysa yeter.",
     },
     {
       title: "Video",
-      description: "Sahne, etkinlik ve sosyal medya için çekim + kurgu.",
+      description: "Çekim ve kurgu. Tempo net, süs yok.",
     },
     {
       title: "Web",
-      description: "Next.js ile hızlı, mobil uyumlu landing ve portföy siteleri.",
+      description: "Hızlı, mobil, gereksiz özellik yok.",
     },
   ],
   process: [
     {
       step: "01",
       title: "Bakmak",
-      description:
-        "Önce izlerim — ışık, mekân, tempo. Ne çekeceğime veya ne yazacağıma kendi merakım karar verir.",
+      description: "Önce izlerim. Karar sonra gelir.",
     },
     {
       step: "02",
-      title: "Denemek",
-      description:
-        "Kadrajı, kurguları, arayüzü yerinde kurarım. Az şey, net sonuç; kalabalık istemem.",
+      title: "Kurmak",
+      description: "Az eleman. Net sonuç.",
     },
     {
       step: "03",
-      title: "Seçmek",
-      description:
-        "Çoğunu eleyip geride kalanı bırakırım. Kalan kare, klip veya sayfa benim için yeterliyse yeter.",
+      title: "Kesmek",
+      description: "Gereksiz olanı çıkarırım.",
     },
   ],
   skills: {
@@ -92,27 +89,23 @@ export const site = {
   },
   services: [
     {
-      title: "Web siteleri",
-      description:
-        "İşletmen veya kişisel markan için tek sayfa veya küçük çok sayfalı siteler.",
+      title: "Web",
+      description: "Tek sayfa veya küçük site. Net yapı.",
       href: "#hizmetler",
     },
     {
-      title: "Fotoğraf çekimi",
-      description:
-        "Portre, etkinlik, konser ve ürün çekimleri — teslimat dijital arşiv veya web galeri.",
+      title: "Fotoğraf",
+      description: "Portre, etkinlik, sahne. Seçilmiş kareler.",
       href: "#fotograf",
     },
     {
-      title: "Video çekimi",
-      description:
-        "Etkinlik, sahne ve sosyal medya için planlı video çekimi.",
+      title: "Video",
+      description: "Çekim. Kurgu. Teslim.",
       href: "/projeler/fotograf#galeri",
     },
     {
-      title: "Editing / post-prodüksiyon",
-      description:
-        "Kurgu, renk düzenleme ve temel ses düzenleme ile teslimata hazır içerik.",
+      title: "Post",
+      description: "Renk, tempo, bitmiş dosya.",
       href: "/projeler/fotograf#galeri",
     },
   ],
@@ -187,8 +180,8 @@ export const site = {
     },
   ],
   contact: {
-    heading: "Merhaba de",
-    subtext: "Bir şey sormak veya birlikte bir şey denemek istersen e-posta ya da Instagram yeterli.",
+    heading: "Yaz.",
+    subtext: "Kısa tut. Ne istediğini söyle.",
   },
   footer: {
     socialLabel: "Instagram",

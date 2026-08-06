@@ -61,24 +61,17 @@ function GalleryCard({
           sizes="(max-width: 768px) 85vw, 420px"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80" />
-        {/* Kamera vizörü köşeleri + hover HUD */}
-        <div
-          className="gallery-hud pointer-events-none absolute inset-3 z-20 transition-opacity duration-500"
-          style={{ opacity: hovered ? 1 : 0 }}
-          aria-hidden
-        >
-          <span className="absolute left-0 top-0 h-5 w-5 border-l border-t border-white/70" />
-          <span className="absolute right-0 top-0 h-5 w-5 border-r border-t border-white/70" />
-          <span className="absolute bottom-0 left-0 h-5 w-5 border-b border-l border-white/70" />
-          <span className="absolute bottom-0 right-0 h-5 w-5 border-b border-r border-white/70" />
-          <span className="absolute right-2 top-2 font-mono text-[9px] tracking-[0.16em] text-white/75">
-            RAW · 4:5
-          </span>
-          <span className="absolute left-2 top-2 flex items-center gap-1.5 font-mono text-[9px] tracking-[0.16em] text-white/75">
-            <span className="h-1.5 w-1.5 rounded-full bg-red-400 shadow-[0_0_8px_rgba(248,113,113,0.8)]" />
-            REC
-          </span>
-        </div>
+          {/* Kamera vizörü köşeleri */}
+          <div
+            className="gallery-hud pointer-events-none absolute inset-3 z-20 transition-opacity duration-500"
+            style={{ opacity: hovered ? 1 : 0 }}
+            aria-hidden
+          >
+            <span className="absolute left-0 top-0 h-4 w-4 border-l border-t border-white/60" />
+            <span className="absolute right-0 top-0 h-4 w-4 border-r border-t border-white/60" />
+            <span className="absolute bottom-0 left-0 h-4 w-4 border-b border-l border-white/60" />
+            <span className="absolute bottom-0 right-0 h-4 w-4 border-b border-r border-white/60" />
+          </div>
         <figcaption className="absolute bottom-0 left-0 right-0 p-5 transition-transform duration-500 ease-out group-hover:-translate-y-2">
           <span className="font-mono text-[10px] tracking-widest text-accent uppercase">
             {String(index + 1).padStart(2, "0")}
@@ -170,9 +163,9 @@ export function Gallery() {
           <div className="relative mx-auto w-full max-w-6xl px-6">
             <div className="flex items-end justify-between gap-6">
               <SectionHeading
-                index="03 — Fotoğraf"
-                title="Işık ve an"
-                subtitle="Kadraj, gölge ve günlük hayattan seçilmiş kareler. Büyütmek için tıkla."
+                index="03"
+                title="Galeri"
+                subtitle="Seçilmiş kareler."
                 className="mb-0 md:mb-0"
               />
               <p className="shrink-0 pb-2 font-mono text-sm tracking-[0.2em] text-muted tabular-nums">
@@ -204,9 +197,9 @@ export function Gallery() {
           <div className="mx-auto max-w-6xl px-6">
             <Reveal>
               <SectionHeading
-                index="03 — Fotoğraf"
-                title="Işık ve an"
-                subtitle="Kadraj, gölge ve günlük hayattan seçilmiş kareler. Büyütmek için tıkla."
+                index="03"
+                title="Galeri"
+                subtitle="Seçilmiş kareler."
               />
             </Reveal>
           </div>

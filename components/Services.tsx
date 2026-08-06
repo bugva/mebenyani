@@ -53,9 +53,9 @@ export function Services() {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal>
               <SectionHeading
-                index="05 — Neler"
-                title="Neler yapıyorum"
-                subtitle="Web, fotoğraf, video ve editing — hepsi kişisel işler, resmi bir şirket değil."
+                index="05"
+                title="Neler"
+                subtitle="İstediğin kadar kısa yaz."
               />
             </Reveal>
           </div>
@@ -233,7 +233,7 @@ function ServiceCard({
         {description}
       </p>
       <p className="mt-8 inline-flex items-center gap-2 text-sm text-accent">
-        İlgili işe git <span aria-hidden>↗</span>
+        İlgili iş <span aria-hidden>→</span>
       </p>
       <Link
         href={href}
